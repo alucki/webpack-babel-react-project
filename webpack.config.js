@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   // 1. use src/index.js as the entry point to bundle all JS files imported here
   entry: './src/index.js',
@@ -22,8 +24,13 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
+
   // 3. the dist folder will serve our app to the browser
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   }
 }
