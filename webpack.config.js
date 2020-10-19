@@ -10,23 +10,21 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
-      }
-    ]
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
 
   // 2. bundled source code files will become bundle.js
   output: {
     path: __dirname + '/dist',
     publicPath: "/",
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 
   // 3. the dist folder will serve our app to the browser
   devServer: {
