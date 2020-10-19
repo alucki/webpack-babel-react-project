@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
   // 1. use src/index.js as the entry point to bundle all JS files imported here
-  entry: './src/index.js',
+  entry: './src/index.jsx',
 
   module: {
     rules: [

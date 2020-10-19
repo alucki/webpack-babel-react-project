@@ -1,9 +1,9 @@
 import React from 'react';
+import { Title } from './app.styled';
 
 const App = ({ title }) => (
   <>
-    <h1>{title}</h1>
-    <h2>{title}</h2>
+    <Title>{title}</Title>
   </>
 );
 
